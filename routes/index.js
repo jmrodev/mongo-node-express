@@ -1,9 +1,11 @@
-import express from 'express';
-const router = express.Router();
+import {Router} from 'express';
+import userRouter from './users.js';
+import productRouter from './products.js';
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const indexRouter = Router();
 
-export default router;
+indexRouter.use('/auth', userRouter);
+indexRouter.use('/products', productRouter);
+
+
+export default indexRouter;

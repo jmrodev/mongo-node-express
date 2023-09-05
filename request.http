@@ -1,0 +1,54 @@
+### create a new user
+
+POST http://localhost:3000/api/auth/
+Content-Type: application/json
+
+{
+    "email": "unmail.com",
+    "password": "123456",
+    "photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
+    "role": 2,
+    "online": "true"
+
+}
+
+### create a new poduct
+
+POST http://localhost:3000/api/products/
+Content-Type: application/json
+
+{
+    "name": "camiseta",
+    "photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
+    "price": 20
+}
+
+### create many poducts
+
+POST http://localhost:3000/api/products/many
+Content-Type: application/json
+
+{
+   "data":[
+      {
+         "name":"camiseta",
+         "photo":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
+         "price":20
+      },
+      {
+         "name":"camiseta",
+         "photo":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
+         "price":20
+      },
+      {
+         "name":"camiseta",
+         "photo":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
+         "price":20
+      },
+      {
+         "name":"camiseta",
+         "photo":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
+         "price":20
+      }
+   ]
+}
